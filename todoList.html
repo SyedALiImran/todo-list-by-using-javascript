@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    
+<div class="container">
+    <center><h2>TODO LIST</h2></center>
+    <div class="row my-5">
+        <div class="col-md-8 my-1">
+            <input type="text" class="form-control" id="newtodo" placeholder="Enter todo">
+        </div>
+        <div class="col-md-4 my-1">
+            <button class="btn btn-success form-control" onclick="Addtodo()">Add todo</button>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="container">
+    <ul id="items">
+        
+    </ul>
+</div>
+
+
+<script>
+
+function Addtodo(){
+    
+    
+    let todoos = document.getElementById("items");    
+  
+    let newTodo = document.getElementById('newtodo');
+  
+    let newElement = document.createElement("li");
+   
+   
+   
+    newElement.innerText = newTodo.value;
+    todoos.appendChild(newElement);
+
+    
+    Swal.fire('New Todo Inserted');
+
+    
+
+
+
+
+    
+}
+
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</body>
+</html>
